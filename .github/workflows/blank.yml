@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo ${{ secrets.DEBIAN_GPG_PRIVATE }} | base64 -d > private.key
-          gpg --import private.key
+          gpg --import --batch private.key
           gpg -K
