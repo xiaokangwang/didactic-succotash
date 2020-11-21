@@ -35,3 +35,5 @@ jobs:
           echo ${{ secrets.DEBIAN_GPG_PRIVATE }} | base64 -d > private.key
           gpg --import --batch private.key
           gpg -K
+          echo 'INVAILD pf4xnr4o450xgi8471m8j3hchfggupgr1xba INVAILD THIS IS A TEST MESSAGE INVAILD' > filetosign
+          gpg --batch -u B24ECFE5FF75D381! --armor --sign filetosign
